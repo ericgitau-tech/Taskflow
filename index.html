@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow - Smart Task Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header>
+        <nav>
+            <div class="logo">⚡ TaskFlow</div>
+            <div class="nav-controls">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    🌙
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Dashboard Stats -->
+        <section class="dashboard" id="dashboard">
+            <div class="stat-card">
+                <h3>Total Tasks</h3>
+                <div class="stat-value" id="totalTasks">0</div>
+            </div>
+            <div class="stat-card">
+                <h3>Active</h3>
+                <div class="stat-value" id="activeTasks">0</div>
+            </div>
+            <div class="stat-card">
+                <h3>Completed</h3>
+                <div class="stat-value" id="completedTasks">0</div>
+            </div>
+            <div class="stat-card">
+                <h3>Completion Rate</h3>
+                <div class="stat-value" id="completionRate">0%</div>
+            </div>
+        </section>
+
+        <!-- Task Input -->
+        <section class="task-input-section">
+            <form id="taskForm" class="input-group">
+                <div class="input-row">
+                    <input 
+                        type="text" 
+                        id="taskTitle" 
+                        placeholder="What needs to be done?" 
+                        required
+                        autocomplete="off"
+                    />
+                </div>
+                <div class="input-row">
+                    <select id="taskCategory" required>
+                        <option value="">Select Category</option>
+                        <option value="Work">💼 Work</option>
+                        <option value="Personal">👤 Personal</option>
+                        <option value="Shopping">🛒 Shopping</option>
+                        <option value="Health">💪 Health</option>
+                        <option value="Learning">📚 Learning</option>
+                    </select>
+                    <select id="taskPriority" required>
+                        <option value="">Select Priority</option>
+                        <option value="high">🔴 High</option>
+                        <option value="medium">🟡 Medium</option>
+                        <option value="low">🟢 Low</option>
+                    </select>
+                    <button type="submit" class="btn btn-primary">
+                        ➕ Add Task
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Filters -->
+        <section class="filters">
+            <button class="filter-btn active" data-filter="all">All Tasks</button>
+            <button class="filter-btn" data-filter="active">Active</button>
+            <button class="filter-btn" data-filter="completed">Completed</button>
+            <button class="filter-btn" data-filter="high">High Priority</button>
+            <button class="filter-btn" data-filter="medium">Medium Priority</button>
+            <button class="filter-btn" data-filter="low">Low Priority</button>
+        </section>
+
+        <!-- Tasks Grid -->
+        <section class="tasks-container" id="tasksContainer">
+            <!-- Tasks will be rendered here by JavaScript -->
+        </section>
+      
+    </main>
+
+      <script src="script.js"></script>
+</body>
+</html>
