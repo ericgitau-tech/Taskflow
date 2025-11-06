@@ -3,7 +3,7 @@
 A fully responsive, feature-rich task manager built with vanilla JavaScript, HTML5, and CSS3. This project demonstrates modern front-end development practices without relying on frameworks.
 
 ## 🚀 Features
-
+    
 - **Task Management**: Create, complete, and delete tasks with ease
 - **Smart Filtering**: Filter tasks by status (all/active/completed) and priority levels
 - **Real-time Dashboard**: Live statistics showing task completion rates
